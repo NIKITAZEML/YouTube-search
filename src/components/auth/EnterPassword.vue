@@ -51,16 +51,8 @@ export default {
 .input-password{
     width: 23.194vw;
     height: 3.333vw;
-    border-radius: .694vw;
-    outline: none;
-    border: solid .1vw rgba(23, 23, 25, 0.2);
     font-size: 1.389vw;
     padding: .833vw 1.042vw .833vw 1.042vw;
-}
-
-.clicked{
-    background-color: rgba(197, 228, 249, 0.3);
-    border: #1390E5 solid .1vw;
 }
 
 .enter-password__eye-icon{
@@ -71,9 +63,6 @@ export default {
     top: 2.431vw;
 }
 
-.enter-password__eye-icon-gray{
-    z-index: 3;
-}
 
 @media screen and (max-width: 768px) {
     .enter-password{
@@ -87,7 +76,6 @@ export default {
     .input-password{
         width: 43.490vw;
         height: 6.250vw;
-        border-radius: 1.302vw;
         font-size: 2.604vw;
         padding: 1.563vw 1.953vw 1.563vw 1.953vw;
     }
@@ -111,7 +99,6 @@ export default {
     .input-password {
         width: 88.75vw;
         height: 15vw;
-        border-radius: 3.125vw;
         font-size: 5vw;
         padding: 3.750vw 4.688vw 3.750vw 4.688vw ;
     }

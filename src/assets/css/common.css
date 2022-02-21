@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #FAFAFA;
+}
+
+input::-moz-placeholder { color: #BEBEBE; }
+input::-webkit-input-placeholder { color: #BEBEBE; }
+
+.container{
+    width: 72.222vw;
+    margin: auto;
+}
+
+input{
+    outline: none;
+    border: solid .1vw rgba(23, 23, 25, 0.2);
+    border-radius: .694vw;
+}
+
+button{
+    font-size: 1.389vw;
+    background-color: #1390E5;
+    border: none;
+    color: #fff;
+}
+
+.borr-10{
+    border-radius: 0.694vw;
+}
+
+.clicked{
+    background-color: rgba(197, 228, 249, 0.3);
+    border: #1390E5 solid .1vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 89.323vw;
+    }
+
+    input{
+        border-radius: 1.302vw;
+    }
+
+    button{
+        font-size: 2.604vw;
+    }
+
+    .borr-10{
+        border-radius: 1.302vw;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container{
+        width: 94.688vw;
+    }
+
+    input{
+        border-radius: 3.125vw;
+    }
+
+    button{
+        font-size: 6.25vw;
+    }
+
+    .borr-10{
+        border-radius: 3.125vw;
+    }
+}

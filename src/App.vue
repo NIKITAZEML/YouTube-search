@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+    <div id="app">
+        <router-view/>
+    </div>
 </template>
 
-<style src="./assets/css/null.css">
+<style>
+@import "./assets/css/null.css";
+@import "./assets/css/common.css";
 
 </style>
