@@ -4,7 +4,9 @@
         <input type="text" class="input-login" id="input-login"
                @focus="focusLogin = !focusLogin"
                :class="{ clicked :  focusLogin}"
-                @blur="focusLogin = !focusLogin" >
+                @blur="focusLogin = !focusLogin"
+                v-model="login"
+                @input="setLogin">
     </div>
 </template>
 
@@ -15,6 +17,14 @@ export default {
         return{
             focusLogin: false,
         }
+    },
+    methods:{
+        setLogin(){
+            this.$emit('setLogin', this.login)
+        }
+    },
+    props:{
+        login: String,
     }
 }
 </script>

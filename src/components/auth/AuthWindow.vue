@@ -8,22 +8,48 @@
         <div class="auth__entrance-heading">
             Вход
         </div>
-        <enter-login></enter-login>
-        <enter-password></enter-password>
-        <router-link to="/Search">
-            <button class="entry-btn">
-                Войти
-            </button>
-        </router-link>
+        <form action="">
+            <enter-login :login="login" @setLogin="setLogin"></enter-login>
+            <enter-password :password="password" @setPassword="setPassword"></enter-password>
+        </form>
+        <button class="entry-btn" @click="submitHandler">
+            Войти
+        </button>
     </div>
 </template>
 
 <script>
 import EnterLogin from './EnterLogin';
 import EnterPassword from './EnterPassword';
+import axios from "axios";
 
 export default {
     name: "AuthWindow",
+    data(){
+      return{
+          login: '',
+          password: '',
+      }
+    },
+    methods:{
+        setLogin(newLogin){
+            this.login = newLogin;
+        },
+        setPassword(newPassword){
+            this.password = newPassword;
+        },
+        async submitHandler(){
+            const formData = {
+                login: this.login,
+                password: this.password
+            }
+
+            try {
+                await this.$store.dispatch('login', formData);
+                this.$router.push('/search')
+            } catch (e){}
+        }
+    },
     components:{
         EnterLogin, EnterPassword
     }

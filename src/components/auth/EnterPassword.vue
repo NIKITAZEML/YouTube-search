@@ -4,7 +4,9 @@
         <input :type="inputType" class="input-password" id="input-password"
                @focus="focusPassword = !focusPassword"
                :class="{ clicked :  focusPassword}"
-               @blur="focusPassword = !focusPassword" >
+               @blur="focusPassword = !focusPassword"
+               v-model="password"
+               @input="setPassword">
         <svg class="enter-password__eye-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
              v-if="openedPassword"
              @click="openedPassword = !openedPassword; inputType = 'password'"
@@ -31,7 +33,15 @@ export default {
             openedPassword: false,
             inputType: 'password',
         }
-    }
+    },
+    props:{
+        password: String,
+    },
+    methods:{
+        setPassword(){
+            this.$emit('setPassword', this.password)
+        }
+    },
 }
 </script>
 

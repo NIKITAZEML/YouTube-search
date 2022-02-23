@@ -33,6 +33,16 @@ export default {
             showModal: false
         }
     },
+    methods:{
+        close(){
+            this.showModal = !this.showModal;
+            this.favoritesOn = true
+        },
+        closeno(){
+            this.showModal = !this.showModal;
+            this.favoritesOn = false;
+        }
+    }
 }
 </script>
 
